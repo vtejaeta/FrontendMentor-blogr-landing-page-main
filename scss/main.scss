@@ -1,0 +1,236 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $text-overpass-font;
+  font-size: $text-size;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 500px;
+  padding: 50px;
+  background-image: url("../images/bg-pattern-intro.svg"),
+    linear-gradient(to right, $very-light-red 15%, $cta-text-color 47%);
+  background-repeat: no-repeat;
+  background-size: 175%;
+  background-position: 20% 53%;
+  border-bottom-left-radius: 75px;
+  color: $text-white-color;
+
+  .nav-items {
+    font-family: $text-ubuntu-font !important;
+    @include set-flex(space-between, center);
+    @include set-max-width(1000px);
+    margin: 0 auto;
+  }
+
+  .brand-and-items {
+    @include set-flex(space-between, center);
+    @include set-width(450px);
+  }
+
+  .about-items {
+    @include set-flex(space-between, center);
+    @include set-width(300px);
+    @include lighten-text;
+  }
+
+  .auth-items {
+    @include set-flex(space-between, center);
+    @include set-width(180px);
+  }
+}
+
+li {
+  @include set-cursor-opacity(1);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-btn {
+  color: $text-white-color;
+  border: none;
+  background: none;
+  @include lighten-text;
+  @include set-cursor-opacity(1);
+}
+
+.sign-up-btn {
+  @include white-red-btn;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.brand-name {
+  @include large-bold-text;
+  margin-bottom: 10px;
+}
+
+.hero-heading {
+  padding-top: 90px;
+  font-size: 58px;
+}
+
+.hero-content {
+  @include set-flex;
+  flex-direction: column;
+  p {
+    opacity: 0.6;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+}
+
+.main-btn {
+  @include set-flex(center, center);
+  button {
+    margin-right: 10px;
+  }
+  .white-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+  .trans-btn {
+    @include white-red-btn;
+    background: none;
+    border: 2px solid white;
+    color: white;
+  }
+}
+
+.section-heading {
+  font-size: 35px;
+  color: $heading-color;
+  position: absolute;
+  left: 35%;
+}
+
+.section-one {
+  position: relative;
+  margin-top: 60px;
+  @include set-flex;
+
+  .left-card {
+    flex: 0 0 58%;
+    align-self: flex-start;
+    padding: 100px;
+  }
+
+  .right-card {
+    flex: 0 0 42%;
+    img {
+      @include set-block-image(150%, 150%);
+    }
+  }
+
+  .card-one {
+    padding-top: 100px;
+  }
+
+  .card-one,
+  .card-two {
+    @include set-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 50px;
+  }
+}
+
+.card-one-heading,
+.card-two-heading {
+  font-size: 23px;
+  color: $heading-color;
+  margin-bottom: 25px;
+}
+
+.card-one-content,
+.card-two-content {
+  color: black;
+  opacity: 0.4;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 25px;
+  line-height: 25px;
+}
+
+.section-two {
+  height: 350px;
+  overflow: visible;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  @include set-flex(center, center);
+  background-image: url("../images/bg-pattern-circles.svg"),
+    linear-gradient(
+      to right,
+      $very-dark-gray-blue 20%,
+      $very-dark-desaturated-blue 50%
+    );
+  background-repeat: no-repeat;
+  background-position: -100% 80%;
+  border-bottom-left-radius: 75px;
+  border-top-right-radius: 75px;
+  color: $text-white-color;
+
+  .left-card {
+    padding: 50px;
+    margin-left: 80px;
+    flex: 0 0 42%;
+    img {
+      @include set-block-image(100%, 100%);
+    }
+  }
+
+  .right-card {
+    flex: 0 0 58%;
+    padding: 100px;
+    align-self: center;
+
+    h1 {
+      font-size: 26px;
+    }
+
+    p {
+      opacity: 0.7;
+      font-weight: 300;
+    }
+
+    .white {
+      color: $text-white-color;
+    }
+  }
+}
+
+.section-three {
+  @include set-flex(center, center);
+  margin-bottom: 150px;
+  .left-card {
+    flex: 0 0 40%;
+    img {
+      @include set-block-image(150%, 150%);
+      object-fit: cover;
+      object-position: -220px;
+    }
+  }
+
+  .right-card {
+    flex: 0 0 60%;
+    padding: 100px;
+
+    .card-one {
+      margin-bottom: 40px;
+    }
+  }
+}

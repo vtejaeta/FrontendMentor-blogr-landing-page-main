@@ -1,0 +1,78 @@
+// === COLORS ===
+$body-bg-color: hsl(0, 0%, 100%);
+$text-white-color: $body-bg-color;
+$footer-text-color: hsl(240, 2%, 79%);
+$body-copy-color: hsl(207, 13%, 34%);
+$footer-bg-color: hsl(240, 10%, 16%);
+$cta-text-color: hsl(356, 100%, 66%);
+$cta-bg-hover-color: hsl(355, 100%, 74%);
+$heading-color: hsl(208, 49%, 24%);
+
+// === GRADIENTS ===
+$very-light-red: hsl(13, 100%, 72%);
+$light-red: hsl(353, 100%, 62%);
+$very-dark-gray-blue: hsl(237, 17%, 21%);
+$very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+// === FONTS ===
+$text-overpass-font: "Overpass", sans-serif;
+$text-ubuntu-font: "Ubuntu", sans-serif;
+
+// === SIZES ===
+$text-size: 16px;
+$mobile-screen-height: 375px;
+$desktop-screen-height: 1440px;
+$footer-height: 90px;
+
+// === MIXINS ===
+@mixin large-bold-text {
+  font: {
+    family: $text-overpass-font;
+    size: 32px;
+    weight: 600;
+  }
+}
+
+@mixin set-flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin set-width($width) {
+  width: $width;
+}
+
+@mixin set-max-width($width) {
+  max-width: $width;
+}
+
+@mixin lighten-text {
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+@mixin white-red-btn {
+  color: $very-light-red;
+  background-color: $text-white-color;
+  font-family: $text-ubuntu-font;
+  border-radius: 18px;
+  font-weight: 800;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@mixin set-cursor-opacity($opacity: 1) {
+  &:hover {
+    color: $text-white-color;
+    cursor: pointer;
+    opacity: $opacity;
+  }
+}
+
+@mixin set-block-image($height: 100%, $width: 100%) {
+  display: block;
+  height: $height;
+  width: $width;
+}
