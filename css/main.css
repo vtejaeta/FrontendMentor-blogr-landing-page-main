@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 500px;
+  padding: 50px;
+  background-image: url("../images/bg-pattern-intro.svg"), linear-gradient(to right, #ff8f70 15%, #ff525d 47%);
+  background-repeat: no-repeat;
+  background-size: 175%;
+  background-position: 20% 53%;
+  border-bottom-left-radius: 75px;
+  color: white;
+}
+
+header .nav-items {
+  font-family: "Ubuntu", sans-serif !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header .brand-and-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+}
+
+header .about-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+header .auth-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+li:hover {
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  color: white;
+  border: none;
+  background: none;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.login-btn:hover {
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.sign-up-btn {
+  color: #ff8f70;
+  background-color: white;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 18px;
+  font-weight: 800;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.brand-name {
+  font-family: "Overpass", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-heading {
+  padding-top: 90px;
+  font-size: 58px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-content p {
+  opacity: 0.6;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.main-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-btn button {
+  margin-right: 10px;
+}
+
+.main-btn .white-btn {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.main-btn .trans-btn {
+  color: #ff8f70;
+  background-color: white;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 18px;
+  font-weight: 800;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: none;
+  border: 2px solid white;
+  color: white;
+}
+
+.section-heading {
+  font-size: 35px;
+  color: #1f3f5b;
+  position: absolute;
+  left: 35%;
+}
+
+.section-one {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-one .left-card {
+  flex: 0 0 58%;
+  align-self: flex-start;
+  padding: 100px;
+}
+
+.section-one .right-card {
+  flex: 0 0 42%;
+}
+
+.section-one .right-card img {
+  display: block;
+  height: 150%;
+  width: 150%;
+}
+
+.section-one .card-one {
+  padding-top: 100px;
+}
+
+.section-one .card-one,
+.section-one .card-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+
+.card-one-heading,
+.card-two-heading {
+  font-size: 23px;
+  color: #1f3f5b;
+  margin-bottom: 25px;
+}
+
+.card-one-content,
+.card-two-content {
+  color: black;
+  opacity: 0.4;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 25px;
+  line-height: 25px;
+}
+
+.section-two {
+  height: 350px;
+  overflow: visible;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/bg-pattern-circles.svg"), linear-gradient(to right, #2c2d3f 20%, #3f4164 50%);
+  background-repeat: no-repeat;
+  background-position: -100% 80%;
+  border-bottom-left-radius: 75px;
+  border-top-right-radius: 75px;
+  color: white;
+}
+
+.section-two .left-card {
+  padding: 50px;
+  margin-left: 80px;
+  flex: 0 0 42%;
+}
+
+.section-two .left-card img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.section-two .right-card {
+  flex: 0 0 58%;
+  padding: 100px;
+  align-self: center;
+}
+
+.section-two .right-card h1 {
+  font-size: 26px;
+}
+
+.section-two .right-card p {
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.section-two .right-card .white {
+  color: white;
+}
+
+.section-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.section-three .left-card {
+  flex: 0 0 40%;
+}
+
+.section-three .left-card img {
+  display: block;
+  height: 150%;
+  width: 150%;
+  object-fit: cover;
+  object-position: -220px;
+}
+
+.section-three .right-card {
+  flex: 0 0 60%;
+  padding: 100px;
+}
+
+.section-three .right-card .card-one {
+  margin-bottom: 40px;
+}
