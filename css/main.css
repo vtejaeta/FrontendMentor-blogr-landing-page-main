@@ -7,6 +7,10 @@
   overflow-x: hidden;
 }
 
+button {
+  outline: none;
+}
+
 ul {
   list-style: none;
 }
@@ -285,4 +289,63 @@ li:hover {
 
 .section-three .right-card .card-one {
   margin-bottom: 40px;
+}
+
+footer {
+  background: #25252d;
+  height: 330px;
+  padding: 75px 0px;
+  color: white;
+  border-top-right-radius: 75px;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 1000px;
+  margin-left: 50px;
+}
+
+footer .footer-container img {
+  display: block;
+  height: 35px;
+  width: 90px;
+}
+
+footer h4 {
+  margin-bottom: 25px;
+}
+
+footer li {
+  margin-bottom: 9px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.attribution {
+  text-align: center;
+  padding: 15px;
+  color: #2c2d3f;
+  font-weight: 800;
+}
+
+.attribution a {
+  color: #ff525d;
+}
+
+.hover-state:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.trans-btn.hover-state:hover {
+  color: #ff8f70;
+  background-color: white;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 18px;
+  font-weight: 800;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
