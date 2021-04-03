@@ -9,6 +9,10 @@
   overflow-x: hidden;
 }
 
+button {
+  outline: none;
+}
+
 ul {
   list-style: none;
 }
@@ -232,5 +236,57 @@ li {
     .card-one {
       margin-bottom: 40px;
     }
+  }
+}
+
+footer {
+  background: $footer-bg-color;
+  height: 330px;
+  padding: 75px 0px;
+  color: $text-white-color;
+  border-top-right-radius: 75px;
+
+  .footer-container {
+    @include set-flex(space-evenly, flex-start);
+    width: 1000px;
+    margin-left: 50px;
+
+    img {
+      @include set-block-image(35px, 90px);
+    }
+  }
+
+  h4 {
+    margin-bottom: 25px;
+  }
+
+  li {
+    margin-bottom: 9px;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+}
+
+.attribution {
+  text-align: center;
+  padding: 15px;
+  color: $very-dark-gray-blue;
+  font-weight: 800;
+
+  a {
+    color: $cta-text-color;
+  }
+}
+
+.hover-state {
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: $text-white-color;
+  }
+}
+
+.trans-btn.hover-state {
+  &:hover {
+    @include white-red-btn;
   }
 }
