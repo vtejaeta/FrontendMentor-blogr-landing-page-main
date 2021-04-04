@@ -28,6 +28,7 @@ header {
   background-position: 20% 53%;
   border-bottom-left-radius: 75px;
   color: white;
+  z-index: 1;
 }
 
 header .nav-items {
@@ -62,14 +63,18 @@ header .auth-items {
   width: 180px;
 }
 
-li:hover {
-  color: white;
-  cursor: pointer;
-  opacity: 1;
+.dropdown-item:hover .item-options {
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  height: auto;
+  margin-top: 50px;
+  background: white;
+  color: black;
 }
 
-li:hover {
-  text-decoration: underline;
+.dropdown-item .item-options {
+  display: none;
 }
 
 .login-btn {
@@ -115,6 +120,8 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
   flex-direction: column;
 }
 
