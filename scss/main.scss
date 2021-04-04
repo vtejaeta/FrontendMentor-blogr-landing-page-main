@@ -31,6 +31,7 @@ header {
   background-position: 20% 53%;
   border-bottom-left-radius: 75px;
   color: $text-white-color;
+  z-index: 1;
 
   .nav-items {
     font-family: $text-ubuntu-font !important;
@@ -56,11 +57,18 @@ header {
   }
 }
 
-li {
-  @include set-cursor-opacity(1);
-  &:hover {
-    text-decoration: underline;
-  }
+.dropdown-item:hover .item-options {
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  height: auto;
+  margin-top: 50px;
+  background: white;
+  color: black;
+}
+
+.dropdown-item .item-options {
+  display: none;
 }
 
 .login-btn {
@@ -89,6 +97,8 @@ li {
 
 .hero-content {
   @include set-flex;
+  position: relative;
+  z-index: 1;
   flex-direction: column;
   p {
     opacity: 0.6;
