@@ -33,8 +33,13 @@ $footer-height: 90px;
   }
 }
 
-@mixin set-flex($justify-content: center, $align-items: center) {
+@mixin set-flex(
+  $justify-content: center,
+  $align-items: center,
+  $direction: row
+) {
   display: flex;
+  flex-direction: $direction;
   justify-content: $justify-content;
   align-items: $align-items;
 }
@@ -75,4 +80,29 @@ $footer-height: 90px;
   display: block;
   height: $height;
   width: $width;
+}
+
+// === MEDIA QUERIES ===
+@mixin set-desktop-screen {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin set-medium-screen {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin set-small-screen {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin set-very-small-screen {
+  @media only screen and (max-width: 375px) {
+    @content;
+  }
 }
