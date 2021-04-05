@@ -42,33 +42,63 @@ header {
 
   .brand-and-items {
     @include set-flex(space-between, center);
-    @include set-width(450px);
+    @include set-width(500px);
   }
 
   .about-items {
     @include set-flex(space-between, center);
-    @include set-width(300px);
-    @include lighten-text;
+    @include set-width(350px);
+    cursor: pointer;
   }
 
   .auth-items {
     @include set-flex(space-between, center);
     @include set-width(180px);
   }
+  .item-name {
+    margin-right: 5px;
+  }
 }
 
 .dropdown-item:hover .item-options {
   z-index: 1000;
-  position: absolute;
   display: block;
-  height: auto;
-  margin-top: 50px;
-  background: white;
-  color: black;
 }
 
-.dropdown-item .item-options {
-  display: none;
+.dropdown-item:hover .dropdown-arrow-container img {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+}
+
+@include set-desktop-screen {
+  .dropdown-item .item-options {
+    display: none;
+    position: absolute;
+    padding: 20px 20px 10px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    margin-top: 15px;
+
+    li {
+      margin-bottom: 15px;
+      &:hover {
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dropdown-item::before {
+    content: "";
+    position: absolute;
+    height: 23px;
+    width: 65px;
+    top: 13%;
+    opacity: 0;
+    background-color: $text-white-color;
+    border: 1px solid crimson;
+  }
 }
 
 .login-btn {
@@ -183,6 +213,7 @@ header {
 .section-two {
   height: 350px;
   overflow: visible;
+  z-index: 2;
   margin-top: 25px;
   margin-bottom: 100px;
   @include set-flex(center, center);
@@ -200,16 +231,15 @@ header {
 
   .left-card {
     padding: 50px;
-    margin-left: 80px;
-    flex: 0 0 42%;
+    flex: 0 0 50%;
     img {
       @include set-block-image(100%, 100%);
     }
   }
 
   .right-card {
-    flex: 0 0 58%;
-    padding: 100px;
+    flex: 0 0 50%;
+    padding: 70px;
     align-self: center;
 
     h1 {
@@ -225,17 +255,80 @@ header {
       color: $text-white-color;
     }
   }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .left-card {
+      margin: 0px;
+      img {
+        width: 125%;
+      }
+    }
+  }
+
+  @include set-medium-screen {
+    flex-direction: column;
+    min-height: 750px;
+    background-position: 100% 200%;
+
+    .left-card {
+      padding: 0px;
+      margin: 0px;
+      overflow: visible;
+      width: 70%;
+      height: 70%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .right-card {
+      text-align: center;
+    }
+  }
+
+  @include set-small-screen {
+    .right-card {
+      padding: 50px;
+    }
+  }
+
+  @include set-very-small-screen {
+    .left-card {
+      width: 100%;
+      height: 40%;
+    }
+    .right-card {
+      padding: 40px;
+    }
+  }
 }
 
 .section-three {
   @include set-flex(center, center);
   margin-bottom: 150px;
+  overflow: hidden;
   .left-card {
     flex: 0 0 40%;
     img {
-      @include set-block-image(150%, 150%);
+      // @include set-block-image(100%, 100%);
       object-fit: cover;
-      object-position: -220px;
+      object-position: -185px;
+      max-width: 150%;
+      margin-right: -180px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      img {
+        max-width: 185%;
+        object-position: -225px;
+      }
     }
   }
 
@@ -247,22 +340,84 @@ header {
       margin-bottom: 40px;
     }
   }
+
+  @include set-medium-screen {
+    flex-direction: column;
+    .left-card img {
+      display: block;
+      content: url("./../images/illustration-laptop-mobile.svg");
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .right-card {
+      padding: 70px;
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+
+  @include set-small-screen {
+    .right-card {
+      padding: 50px;
+    }
+  }
+
+  @include set-very-small-screen {
+    .left-card img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .right-card {
+      padding: 40px;
+    }
+  }
 }
 
 footer {
   background: $footer-bg-color;
-  height: 330px;
+  min-height: 330px;
   padding: 75px 0px;
   color: $text-white-color;
   border-top-right-radius: 75px;
 
   .footer-container {
     @include set-flex(space-evenly, flex-start);
-    width: 1000px;
+    max-width: 1000px;
     margin-left: 50px;
 
     img {
       @include set-block-image(35px, 90px);
+    }
+
+    li:hover {
+      @include set-cursor-opacity;
+      text-decoration: underline;
+    }
+
+    @include set-medium-screen {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    @include set-small-screen {
+      @include set-flex(center, center, column);
+      max-width: 85%;
+      margin: 0 auto;
+
+      img {
+        margin-bottom: 30px;
+      }
+
+      .col {
+        margin: 25px 0;
+      }
     }
   }
 
