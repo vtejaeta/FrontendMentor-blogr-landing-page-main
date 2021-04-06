@@ -7,6 +7,16 @@
   overflow-x: hidden;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
 button {
   outline: none;
 }
@@ -46,7 +56,7 @@ header .brand-and-items {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
+  max-width: 480px;
 }
 
 header .about-items {
@@ -56,6 +66,14 @@ header .about-items {
   align-items: center;
   width: 350px;
   cursor: pointer;
+  margin-left: 45px;
+}
+
+@media only screen and (max-width: 800px) {
+  header .about-items {
+    width: 280px;
+    margin-left: 20px;
+  }
 }
 
 header .auth-items {
@@ -68,6 +86,129 @@ header .auth-items {
 
 header .item-name {
   margin-right: 5px;
+}
+
+header .menu-container {
+  display: none;
+}
+
+@media only screen and (max-width: 736px) {
+  header .about-items,
+  header .auth-items {
+    display: none;
+  }
+  header .menu-container {
+    display: block;
+  }
+  header #btnControl {
+    display: none;
+  }
+  header #btnControl:checked + label > img {
+    display: block;
+    cursor: pointer;
+    content: url("./../images/icon-close.svg");
+  }
+}
+
+header hr {
+  border: 0.1px solid #e6e6e6;
+}
+
+header .menu-items-card {
+  position: absolute;
+  display: none;
+  min-height: 350px;
+  border-radius: 7px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  background: white;
+  color: black;
+  min-width: 280px;
+  max-width: 500px;
+  left: 6%;
+  right: 20%;
+  top: 25%;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+}
+
+header .menu-items-card .btn-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+header .menu-items-card .btn-cont button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+header .menu-items-card .btn-cont .login {
+  background: none;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+header .menu-items-card .btn-cont .sign-up {
+  padding: 9px 15px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #ff8f70 15%, #ff525d 47%);
+  font-weight: 600;
+  color: white;
+}
+
+header .menu-items-card .sub-options {
+  display: none;
+}
+
+header .menu-items-card .option-cont .option {
+  cursor: pointer;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 31px;
+  text-align: center;
+  font-weight: 600;
+}
+
+header .menu-items-card .option-cont .option .sub-options {
+  margin-top: 20px;
+}
+
+header .menu-items-card .option-cont .option .sub-options ul {
+  background: rgba(224, 224, 224, 0.4);
+  padding: 20px;
+}
+
+header .menu-items-card .option-cont .option .sub-options ul li {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header .menu-items-card .option-cont .option .sub-options ul li:hover {
+  cursor: pointer;
+  color: black;
+}
+
+header #btnControl:checked + label + .menu-items-card {
+  display: block;
+  opacity: 1;
+  z-index: 999;
+  padding: 30px;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.option:hover .sub-options {
+  display: block;
+}
+
+.option:hover .option-arrow-container img {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
 }
 
 .dropdown-item:hover .item-options {
@@ -137,15 +278,31 @@ header .item-name {
 }
 
 .brand-name {
-  font-family: "Overpass", sans-serif;
-  font-size: 32px;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .hero-heading {
   padding-top: 90px;
-  font-size: 58px;
+  font-size: 45px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-heading {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .hero-heading {
+    text-align: center;
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .hero-heading {
+    font-size: 25px;
+  }
 }
 
 .hero-content {
@@ -159,9 +316,15 @@ header .item-name {
 }
 
 .hero-content p {
-  opacity: 0.6;
+  opacity: 0.8;
   margin-top: 10px;
   margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 575px) {
+  .hero-content p {
+    text-align: center;
+  }
 }
 
 .main-btn {
@@ -195,20 +358,41 @@ header .item-name {
   color: white;
 }
 
+@media only screen and (max-width: 375px) {
+  .main-btn {
+    font-size: 13px;
+    max-width: 230px;
+    margin: 0 auto;
+  }
+}
+
 .section-heading {
   font-size: 35px;
   color: #1f3f5b;
-  position: absolute;
-  left: 35%;
+  text-align: center;
+  margin-top: 125px;
+}
+
+@media only screen and (max-width: 400px) {
+  .section-heading {
+    font-size: 25px;
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .section-heading {
+    font-size: 23px;
+    margin-top: 75px;
+  }
 }
 
 .section-one {
-  position: relative;
-  margin-top: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 75px;
 }
 
 .section-one .left-card {
@@ -228,7 +412,7 @@ header .item-name {
 }
 
 .section-one .card-one {
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 .section-one .card-one,
@@ -240,6 +424,56 @@ header .item-name {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 375px) {
+  .section-one .card-one,
+  .section-one .card-two {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .section-one .left-card {
+    padding: 75px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-one {
+    flex-direction: column;
+  }
+  .section-one .left-card {
+    order: 2;
+  }
+  .section-one .left-card h1 {
+    text-align: center;
+  }
+  .section-one .right-card {
+    order: 1;
+  }
+  .section-one .right-card img {
+    content: url("./../images/illustration-editor-mobile.svg");
+    margin-top: 50px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .section-one .left-card {
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .section-one .left-card {
+    padding: 40px 40px 0px;
+  }
+  .section-one .left-card p {
+    text-align: center;
+  }
 }
 
 .card-one-heading,
@@ -417,18 +651,27 @@ header .item-name {
 }
 
 @media only screen and (max-width: 575px) {
+  .section-three {
+    margin-bottom: 100px;
+  }
   .section-three .right-card {
     padding: 50px;
   }
 }
 
 @media only screen and (max-width: 375px) {
+  .section-three {
+    margin-bottom: 75px;
+  }
   .section-three .left-card img {
     width: 100%;
     height: 100%;
   }
   .section-three .right-card {
-    padding: 40px;
+    padding: 40px 40px 0px;
+  }
+  .section-three .right-card p {
+    text-align: center;
   }
 }
 
