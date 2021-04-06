@@ -30,7 +30,7 @@
     <header>
       <nav class="nav-items">
         <div class="brand-and-items">
-          <h1 class="brand-name">Blogr</h1>
+          <img class="brand-name" src="./images/logo.svg" alt="brand-logo" />
           <ul class="about-items">
             <li class="dropdown-item">
               <span class="item-name">Product</span>
@@ -80,19 +80,83 @@
           <button class="login-btn">Login</button>
           <button class="sign-up-btn white-btn hover-state">Sign Up</button>
         </div>
+        <div class="menu-container">
+          <input type="checkbox" id="btnControl" />
+          <label class="btn" for="btnControl"
+            ><img
+              src="./images/icon-hamburger.svg"
+              alt="hamburger menu"
+              class="menu-icon"
+          /></label>
+          <div class="menu-items-card">
+            <ul class="option-cont">
+              <li class="option">
+                <span class="option-name">Product</span>
+                <span class="option-arrow-container"
+                  ><img src="./images/icon-arrow-dark.svg" alt="dropdown-arrows"
+                /></span>
+                <div class="sub-options">
+                  <ul>
+                    <li class="final-option">Overview</li>
+                    <li class="final-option">Pricing</li>
+                    <li class="final-option">Marketplace</li>
+                    <li class="final-option">Features</li>
+                    <li class="final-option">Integrations</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="option">
+                <span class="option-name">Company</span>
+                <span class="option-arrow-container"
+                  ><img src="./images/icon-arrow-dark.svg" alt="dropdown-arrows"
+                /></span>
+                <div>
+                <div class="sub-options">
+                  <ul>
+                    <li class="final-option">About</li>
+                    <li class="final-option">Team</li>
+                    <li class="final-option">Blog</li>
+                    <li class="final-option">Careers</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="option">
+                <span class="option-name">Connect</span>
+                <span class="option-arrow-container"
+                  ><img src="./images/icon-arrow-dark.svg" alt="dropdown-arrows"
+                /></span>
+                <div>
+                <div class="sub-options">
+                  <ul>
+                    <li class="final-option">Contact</li>
+                    <li class="final-option">Newsletter</li>
+                    <li class="final-option">LinkedIn</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <hr>
+            <div class="btn-cont">
+              <button class="login">Login</button>
+              <button class="sign-up">Sign up</button>
+            </div>
+          </div>
+        </div>
       </nav>
       <div class="hero-content">
         <h1 class="hero-heading">A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
         <div class="main-btn">
-          <button class="sign-up-btn white-btn hover-state">Start for Free</button>
+          <button class="sign-up-btn white-btn hover-state">
+            Start for Free
+          </button>
           <button class="trans-btn hover-state">Learn more</button>
         </div>
       </div>
     </header>
+    <h1 class="section-heading">Designed for the future</h1>
     <section class="section-one">
       <div class="left-card">
-        <h1 class="section-heading">Designed for the future</h1>
         <div class="card-one">
           <h1 class="card-one-heading">Introducing an extensible editor</h1>
           <p class="card-one-content">
@@ -199,9 +263,18 @@
     </footer>
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
         >Frontend Mentor</a
-      >. <br>Coded by <a href="https://github.com/vtejaeta" target="_blank" rel="noopener noreferrer">vtejaeta</a>.
+      >. <br />Coded by
+      <a
+        href="https://github.com/vtejaeta"
+        target="_blank"
+        rel="noopener noreferrer"
+        >vtejaeta</a
+      >.
     </div>
   </body>
 </html>
