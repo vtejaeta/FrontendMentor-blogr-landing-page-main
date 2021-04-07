@@ -79,7 +79,22 @@ header {
     display: none;
   }
 
-  @media only screen and (max-width: 736px) {
+  @media only screen and (max-width: 700px) {
+    .nav-items {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .auth-items {
+      width: 130px;
+      .sign-up-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
     .about-items,
     .auth-items {
       display: none;
@@ -113,8 +128,8 @@ header {
     background: white;
     color: black;
     min-width: 280px;
-    max-width: 500px;
-    left: 6%;
+    max-width: 425px;
+    left: 20%;
     right: 20%;
     top: 25%;
     transition: visibility 0s, opacity 0.5s linear;
@@ -173,6 +188,16 @@ header {
         }
       }
     }
+
+    @include set-very-small-screen {
+      left: 10%;
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 310px) {
+      padding: 20px 10px !important;
+    }
   }
 
   #btnControl:checked + label + .menu-items-card {
@@ -230,8 +255,8 @@ header {
   .dropdown-item::before {
     content: "";
     position: absolute;
-    height: 23px;
-    width: 65px;
+    height: 50px;
+    width: 100px;
     top: 13%;
     opacity: 0;
     background-color: $text-white-color;
@@ -493,7 +518,7 @@ header {
       padding: 0px;
       margin: 0px;
       overflow: visible;
-      width: 70%;
+      width: 90%;
       height: 70%;
 
       img {
@@ -521,6 +546,7 @@ header {
     }
     .right-card {
       padding: 40px;
+      overflow: hidden;
     }
   }
 }
@@ -659,6 +685,7 @@ footer {
   padding: 15px;
   color: $very-dark-gray-blue;
   font-weight: 800;
+  line-height: 2;
 
   a {
     color: $cta-text-color;
