@@ -92,7 +92,21 @@ header .menu-container {
   display: none;
 }
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 700px) {
+  header .nav-items {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  header .auth-items {
+    width: 130px;
+  }
+  header .auth-items .sign-up-btn {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
   header .about-items,
   header .auth-items {
     display: none;
@@ -123,8 +137,8 @@ header .menu-items-card {
   background: white;
   color: black;
   min-width: 280px;
-  max-width: 500px;
-  left: 6%;
+  max-width: 425px;
+  left: 20%;
   right: 20%;
   top: 25%;
   transition: visibility 0s, opacity 0.5s linear;
@@ -191,6 +205,20 @@ header .menu-items-card .option-cont .option .sub-options ul li:hover {
   color: black;
 }
 
+@media only screen and (max-width: 375px) {
+  header .menu-items-card {
+    left: 10%;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  header .menu-items-card {
+    padding: 20px 10px !important;
+  }
+}
+
 header #btnControl:checked + label + .menu-items-card {
   display: block;
   opacity: 1;
@@ -241,8 +269,8 @@ header #btnControl:checked + label + .menu-items-card {
   .dropdown-item::before {
     content: "";
     position: absolute;
-    height: 23px;
-    width: 65px;
+    height: 50px;
+    width: 100px;
     top: 13%;
     opacity: 0;
     background-color: white;
@@ -564,7 +592,7 @@ header #btnControl:checked + label + .menu-items-card {
     padding: 0px;
     margin: 0px;
     overflow: visible;
-    width: 70%;
+    width: 90%;
     height: 70%;
   }
   .section-two .left-card img {
@@ -590,6 +618,7 @@ header #btnControl:checked + label + .menu-items-card {
   }
   .section-two .right-card {
     padding: 40px;
+    overflow: hidden;
   }
 }
 
@@ -747,6 +776,7 @@ footer li {
   padding: 15px;
   color: #2c2d3f;
   font-weight: 800;
+  line-height: 2;
 }
 
 .attribution a {
